@@ -1,11 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import Header from './components/Header';
+import Input from './components/Input';
 
 export default function App() {
-  const name = 'ian'
+  const name = 'UNmyWifi'
+  const handleTextInput = (newText) => {
+    console.log(newText)
+  }
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on {name} app!</Text>
+      <Header appName={name}/>
+      <Input handleTextInput={handleTextInput}/>
       <StatusBar style="auto" />
     </View>
   );
